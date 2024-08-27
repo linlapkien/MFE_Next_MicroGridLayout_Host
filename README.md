@@ -25,13 +25,15 @@ We have six next.js applications
 - `This repo` Host - [port 3001](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Host)
 - `Hero component` - [port 3002](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Hero_Component)
 - `Camp component` - [port 3003](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Camp_Component)
-- `Guid component` - [port 3004](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Guide_Component)
+- `Guide component` - [port 3004](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Guide_Component)
 - `Feature component` - [port 3005](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Feature_Component)
 - `GetApp component` - [port 3006](https://github.com/linlapkien/MFE_Next_MicroGridLayout_GetApp_Component)
 
 The applications utilize omnidirectional routing and pages or components are able to be federated between applications
 
 I am using hooks here to ensure multiple copies of react are not loaded into scope on server or client.
+
+This host app will remote to other components to get the element inside this app, then use it like a react-component.
 
 Next.js has all its internal modules pre-shared via [@module-federation/nextjs-mf](https://github.com/module-federation/module-federation-examples/tree/master/nextjs-ssr) you do need to share react via the plugin.
 
