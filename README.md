@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a small project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). I'm using MFE framework to clone a [camptraveller.com](https://camptraveler.com/) web, here is [initial src](https://gist.github.com/adrianhajdin/8576813dae0085beaac8291e8a63c32d)!
 
 ## Getting Started
 
@@ -14,27 +14,31 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Context
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+We have six next.js applications
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `This repo` Host - [port 3001](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Host)
+- `Hero component` - [port 3002](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Hero_Component)
+- `Camp component` - [port 3003](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Camp_Component)
+- `Guid component` - [port 3004](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Guide_Component)
+- `Feature component` - [port 3005](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Feature_Component)
+- `GetApp component` - [port 3006](https://github.com/linlapkien/MFE_Next_MicroGridLayout_GetApp_Component)
 
-## Learn More
+The applications utilize omnidirectional routing and pages or components are able to be federated between applications
 
-To learn more about Next.js, take a look at the following resources:
+I am using hooks here to ensure multiple copies of react are not loaded into scope on server or client.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js has all its internal modules pre-shared via [@module-federation/nextjs-mf](https://github.com/module-federation/module-federation-examples/tree/master/nextjs-ssr) you do need to share react via the plugin.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Read more
 
-## Deploy on Vercel
+[1. Micro Frontend architecture | Nextjs](https://www.youtube.com/watch?v=wMdt5W8sD54&t=168s)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[2. npm Module Federation For Next.js](https://www.npmjs.com/package/@module-federation/nextjs-mf)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[3. Medium Building a Micro Frontend Application with Next.js 14.2 and Tailwind CSS](https://blog.stackademic.com/building-a-micro-frontend-application-with-next-js-14-2-and-tailwind-css-part-i-82d13cc207da) <-- Most useful for beginners, this blog has 4 parts. Full tutorials !
