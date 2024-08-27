@@ -37,6 +37,14 @@ This host app will remote to other components to get the element inside this app
 
 Next.js has all its internal modules pre-shared via [@module-federation/nextjs-mf](https://github.com/module-federation/module-federation-examples/tree/master/nextjs-ssr) you do need to share react via the plugin.
 
+## Result 
+
+We have to run all the component repo, finally your host will appear like this: 
+
+<img width="1932" alt="Screenshot 2024-08-27 at 14 00 00" src="https://github.com/user-attachments/assets/d235605d-c4bf-49b5-aa58-ddd0b13b951b">
+
+We can customize in settings.js the position of the component and the dimensions of the component.
+
 ### Read more
 
 [1. Micro Frontend architecture | Nextjs](https://www.youtube.com/watch?v=wMdt5W8sD54&t=168s)
