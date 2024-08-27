@@ -9,6 +9,7 @@ const remotes = (isServer) => {
     guide_component: `guide_component@http://localhost:3004/_next/static/${location}/remoteEntry.js`,
     feature_component: `feature_component@http://localhost:3005/_next/static/${location}/remoteEntry.js`,
     getapp_component: `getapp_component@http://localhost:3006/_next/static/${location}/remoteEntry.js`,
+    hero2_component: `hero2_component@http://localhost:3007/_next/static/${location}/remoteEntry.js`,
   };
 };
 
