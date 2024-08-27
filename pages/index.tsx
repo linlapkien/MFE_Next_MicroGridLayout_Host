@@ -1,11 +1,6 @@
-import Camp from '@/components/camp';
-import Features from '@/components/features';
-import Footer from '@/components/footer';
-import GetApp from '@/components/getApp';
-import Guide from '@/components/guide';
-import Hero from '@/components/hero';
-import Navbar from '@/components/navbar';
 import dynamic from 'next/dynamic';
+import settings from './setting';
+import GridLayout from './gridLayout';
 
 // ------------------------------------------
 
@@ -28,15 +23,17 @@ const GetAppCompnent = dynamic(() => import('getapp_component/Getapp'), {
 // ------------------------------------------
 
 export default function Home() {
+  const components = {
+    HeroCompnent: <HeroCompnent />,
+    CampCompnent: <CampCompnent />,
+    GuideCompnent: <GuideCompnent />,
+    FeatureCompnent: <FeatureCompnent />,
+    GetAppCompnent: <GetAppCompnent />,
+  };
+
   return (
     <>
-      <Navbar />
-      <HeroCompnent />
-      <CampCompnent />
-      <GuideCompnent />
-      <FeatureCompnent />
-      <GetAppCompnent />
-      <Footer />
+      <GridLayout settings={settings} components={components} />
     </>
   );
 }
