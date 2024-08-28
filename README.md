@@ -20,7 +20,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ## Context
 
-We have six next.js applications
+We have seven next.js applications (click in port to navigate to that repo)
 
 - `This repo` Host - [port 3001](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Host)
 - `Hero component` - [port 3002](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Hero_Component)
@@ -28,6 +28,7 @@ We have six next.js applications
 - `Guide component` - [port 3004](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Guide_Component)
 - `Feature component` - [port 3005](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Feature_Component)
 - `GetApp component` - [port 3006](https://github.com/linlapkien/MFE_Next_MicroGridLayout_GetApp_Component)
+- `Hero 2 component` - [port 3007](https://github.com/linlapkien/MFE_Next_MicroGridLayout_Hero2_Component)
 
 The applications utilize omnidirectional routing and pages or components are able to be federated between applications
 
